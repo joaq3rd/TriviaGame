@@ -2,7 +2,7 @@ window.onload = sendApiRequest()
 
 //An asynchronous function to fetch data from the API.
 async function sendApiRequest(){
-    let response = await fetch(`https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple`);
+    let response = await fetch(`https://opentdb.com/api.php?amount=15&category=13&difficulty=easy&type=multiple`);
     console.log(response)
     let data = await response.json()
     console.log(data)
