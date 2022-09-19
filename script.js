@@ -2,7 +2,7 @@ window.onload = sendApiRequest()
 
 //An asynchronous function to fetch data from the API.
 async function sendApiRequest(){
-    let response = await fetch(`https://opentdb.com/api.php?amount=15&category=13&difficulty=easy&type=multiple`);
+    let response = await fetch(`https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple`);
     console.log(response)
     let data = await response.json()
     console.log(data)
@@ -23,9 +23,24 @@ function useApiData(data){
     document.querySelector("#answer4").innerHTML = data.results[0].incorrect_answers[2]
 
     let correctButton = document.querySelector("#answer1")
+    let incorrectButton2 = document.querySelector("#answer2")
+    let incorrectButton3 = document.querySelector("#answer3")
+    let incorrectButton4 = document.querySelector("#answer4")
+
+    incorrectButton2.addEventListener("click",()=>{
+        alert("Wow...slow down. That answer is incorrect.")
+    })
+
+    incorrectButton3.addEventListener("click",()=>{
+        alert("This answer is incorrect.")
+    })
+    
+    incorrectButton4.addEventListener("click",()=>{
+        alert("You tried your hardest...and could have done better.")
+    })
 
     correctButton.addEventListener("click",()=>{
         alert("Correct! YOU ARE SO SMART")
-        sendApiRequest()
+        window.location.reload()
     })
 }

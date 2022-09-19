@@ -1,0 +1,14 @@
+.container {
+    display: row;
+    flex-direction: column;
+}
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    color: red;
+}

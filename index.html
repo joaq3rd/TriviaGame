@@ -8,23 +8,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- import the webpage's stylesheet -->
-        <link rel="stylesheet" href="style.css" />
-
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <!-- import the webpage's javascript file -->
-        <script src="script.js" defer></script>
+        <script src="script.js"></script>
     </head>
 
     <body>
-        <h1>Trivia Game</h1>
+        <div class="container">
+            <h1>Trivia Game</h1>
 
-        <p id="category"></p>
-        <p id="difficulty"></p>
-        <p id="question"></p>
+            <p id="category"></p>
+            <p id="difficulty"></p>
+            <p id="question"></p>
+            <div class="answers">
+                <button id="answer1"></button>
+                <button id="answer2"></button>
+                <button id="answer3"></button>
+                <button id="answer4"></button>
+            </div>
+        </div>
 
-        <button id="answer1"></button>
-        <button id="answer2"></button>
-        <button id="answer3"></button>
-        <button id="answer4"></button>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     </body>
 
 </html>
